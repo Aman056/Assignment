@@ -1,6 +1,5 @@
 import axios from "axios";
 import { createAsyncThunk } from "@reduxjs/toolkit";
-// import { url } from "../BaseURL";
 import { BaseUrl } from "../Base_URL";
 
 export const Employee = createAsyncThunk('Auth/Employee', async (data) => {

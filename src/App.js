@@ -5,8 +5,6 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { useEffect } from 'react';
 import { Employee } from './Redux/Actions/Employee';
 import { ThemeProvider } from '@emotion/react';
-// import heme from './Components/Theme'
-import Home from './Pages/Home';
 import { theme } from './Components/Theme'
 import { useDispatch, useSelector } from 'react-redux';
 const NotFound = lazy(() => import('./Pages/NotFound'));
@@ -33,6 +31,8 @@ function App() {
     fetchData();
   }, [dispatch]);
   console.log(resultEmp)
+
+  // Resister Service Worker
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/service-worker.js')
       .then((registration) => {
@@ -51,8 +51,7 @@ function App() {
           <Suspense fallback={<div>Loading...</div>} />
           <Navbar />
           <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/form" component={FormComponent} />
+            <Route exact path="/" component={FormComponent} />
             <Route exact path="/blog" component={Blog} />
             <Route path="/blog/:id" render={(props) => <Post {...props} />} />
 

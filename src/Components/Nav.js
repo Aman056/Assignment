@@ -9,7 +9,7 @@ const Navbar = () => {
     }
     const navigation = [
         { name: 'Dynamic routing', href: '/blog', current: true },
-        { name: 'Form', href: '/form', current: false },
+        { name: 'Form', href: '/', current: false },
 
     ]
 

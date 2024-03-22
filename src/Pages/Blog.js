@@ -11,6 +11,7 @@ const Blog = () => {
             window.location.reload(true)
         }, 500);
     }
+ 
     return (
         <div>
             <div className="bg-white py-24 sm:py-32">
